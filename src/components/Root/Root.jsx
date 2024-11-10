@@ -20,16 +20,17 @@ const Root = () => {
             <div className=''>
                 <Navbar />
                 <Outlet />
-                {/* <Footer /> */}
+                
                  {
-                    // (
-                    //     (path==='/products') ||
-                    //     (path==='/statistics') ||
-                    //     (path==='/dashboard') || 
-                    //     (path==='/signIn')
+                    (
+                        (path==='/products') ||
+                        (path==='/statistics') ||
+                        (path==='/dashboard') || 
+                        (path==='/signIn')  ||
+                        (path==='/cartList') ||
+                        (path==='/wishList') 
                         
-                    // ) 
-                    (path !='/')
+                    ) 
                     && 
                     <> <Footer></Footer>
                     </>

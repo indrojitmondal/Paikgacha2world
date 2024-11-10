@@ -162,17 +162,20 @@ const Navbar = () => {
                         </div>
                         <div className="flex text-black items-center gap-4 pr-4">
                             {/* <a className="btn">Button</a>  */}
-                            <div className='flex border border-white bg-white p-2 rounded-[50%] items-center gap-1'>
+                            <NavLink to={'/cartList'}   
+                     className={({ isActive }) =>isActive ? "text-primary font-bold flex border border-white p-2 rounded-[50%] items-center gap-1" : "flex border border-white bg-white p-2 rounded-[50%] items-center gap-1"  
+                     }>
                                 {/* <h3>1</h3> */}
                                 <sup>{cart?.length ? cart.length : ''}</sup>
                                 <BsCart3 className='font-bold' />
-                            </div>
+                            </NavLink>
 
-                            <div className='flex border border-white bg-white p-2  rounded-[50%] items-center gap-1'>
-                                {/* <h3>1</h3> */}
+                            <NavLink to={'/wishList'}   
+                     className={({ isActive }) =>isActive ? "text-primary font-bold flex border border-white p-2 rounded-[50%] items-center gap-1" : "flex border border-white bg-white p-2 rounded-[50%] items-center gap-1"  
+                     }>
                                 <sup>{wish?.length ? wish.length : ''}</sup>
                                 <IoIosHeartEmpty className='font-bold' />
-                            </div>
+                            </NavLink>
 
 
 
@@ -294,7 +297,7 @@ const Navbar = () => {
 
                             <Helmet>
 
-                                <title>Gadget Heaven</title>
+                                <title>Paikgacha.com</title>
 
                             </Helmet>
 

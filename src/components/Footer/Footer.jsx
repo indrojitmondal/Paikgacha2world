@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='mt-8'>
              <div className='flex flex-col justify-center'>
-                 <h1 className='text-2xl font-bold text-center'>Gadget Heaven</h1>
+                 <h1 className='text-2xl font-bold text-center'>Paikgacha.com</h1>
                  <p className='text-center'>Leading the way in cutting-edge technology and innovation.</p>
              </div>
 
