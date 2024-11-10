@@ -13,6 +13,7 @@ import { WishContext, cartContext } from '../Root/Root';
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Helmet } from 'react-helmet-async';
 import Footer from '../Footer/Footer';
+import { IoSearch } from "react-icons/io5";
 // export const cartContext = createContext(0);
 
 
@@ -116,6 +117,17 @@ const Navbar = () => {
                     Dashboard
                 </NavLink>
             </li>
+
+            <li>
+                <NavLink
+                    to="/signIn"
+                    className={({ isActive }) =>
+                        isActive ? "text-primary font-bold" : ""
+                    }
+                >
+                    Hello, Sign In
+                </NavLink>
+            </li>
         </>
     );
 
@@ -134,13 +146,13 @@ const Navbar = () => {
                     {/* text-white rounded-3xl bg-primary border-[7px] border-b1 */}
 
 
-                    <div className=" navbar-section p-10 flex justify-between">
+                    <div className=" navbar-section pt-10 px-10 flex justify-between">
 
 
                         <div className="">
 
 
-                            <h1 className='text-xl font-bold'>Gadget Heaven</h1>
+                            <h1 className='text-xl font-bold'>Paikgacha.com</h1>
                         </div>
                         <div className="flex">
                             <ul className=" flex gap-10 px-1">
@@ -181,7 +193,16 @@ const Navbar = () => {
 
 
 
-                            <h1 className='text-center text-2xl font-bold'>{heading}</h1>
+                            <div className="form-control relative  mx-auto w-[300px]">
+                                <input type="text" placeholder="Search Paikgacha" className="input text-black  input-bordered " />
+                                 
+                                 <button className='absolute right-3 top-4'>
+                                 <IoSearch className=' text-primary' />
+                                 </button>
+                                
+                            </div>
+                            <h1 className='text-center py-1 text-2xl font-bold'>{heading}</h1>
+
 
                             <p className='text-center'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
 
@@ -191,6 +212,7 @@ const Navbar = () => {
 
                                     path === '/' &&
 
+
                                     <a href="#products">
                                         <button
 
@@ -198,6 +220,11 @@ const Navbar = () => {
                                         </button>
 
                                     </a>
+
+
+
+
+
 
 
                                 }

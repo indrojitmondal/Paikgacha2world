@@ -22,12 +22,15 @@ const Root = () => {
                 <Outlet />
                 {/* <Footer /> */}
                  {
-                    (
-                        (path==='/products') ||
-                        (path==='/statistics') ||
-                        (path==='/dashboard')
+                    // (
+                    //     (path==='/products') ||
+                    //     (path==='/statistics') ||
+                    //     (path==='/dashboard') || 
+                    //     (path==='/signIn')
                         
-                    ) && 
+                    // ) 
+                    (path !='/')
+                    && 
                     <> <Footer></Footer>
                     </>
                     
