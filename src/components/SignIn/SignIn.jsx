@@ -3,8 +3,35 @@ import React from 'react';
 import loginImage from '../../assets/undraw_thought_process_re_om58.svg'
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from '../../Firebase/firebase.init';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+
+    const navigate= useNavigate();
+
+    const handlerGoogleSignIn = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+              
+                // The signed-in user info.
+                const userDisplayName = result.user.displayName;
+                console.log('User Name: ',userDisplayName);
+                navigate('/');
+
+              
+             
+            }).catch((error) => {
+                // Handle Errors here.
+                console.log('Error: ',error);
+            });
+
+
+    }
+
     return (
         <div className='mx-10 mt-3 border   rounded-xl  '>
             {/* <h2 className='text-2xl py-4 text-center font-bold'>Welcome to Paikgacha.com</h2> */}
@@ -30,14 +57,14 @@ const SignIn = () => {
                                     <button className="btn btn-active btn-primary bg-blue-600 "><FaFacebook className='text-xl' /> Facebook</button>
 
 
-                                    <button className="btn btn-active btn-secondary bg-pink-600"> <FaGoogle /> Google</button>
+                                    <button onClick={handlerGoogleSignIn} className="btn btn-active btn-secondary bg-pink-600"> <FaGoogle /> Google</button>
                                 </div>
 
                             </div>
                             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                                 <form className="card-body  ">
 
-                                   <div className="form-control">
+                                    <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Name</span>
                                         </label>

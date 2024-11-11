@@ -41,7 +41,7 @@ const Root = () => {
 
             </div>
         </WishContext.Provider>
-    </cartContext.Provider>
+        </cartContext.Provider>
     );
 };
 
