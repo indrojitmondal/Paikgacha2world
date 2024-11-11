@@ -9,12 +9,12 @@ import bannerImage from '../../assets/banner.jpg'
 import { BsCart3 } from "react-icons/bs";
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Products from '../Products/Products';
-import { WishContext, cartContext } from '../Root/Root';
+import { WishContext, cartContext, userContext } from '../Root/Root';
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Helmet } from 'react-helmet-async';
 import Footer from '../Footer/Footer';
 import { IoSearch } from "react-icons/io5";
-// export const cartContext = createContext(0);
+
 
 
 
@@ -22,6 +22,7 @@ const Navbar = () => {
     const [heading, setHeading] = useState('');
     const { cart } = useContext(cartContext);
     const { wish } = useContext(WishContext);
+    const {userName, setUserName} =useContext(userContext);
 
     // console.log('Cart:', cart);
     // console.log('Wish length', wish.length);
@@ -125,7 +126,7 @@ const Navbar = () => {
                         isActive ? "text-primary font-bold" : ""
                     }
                 >
-                    Hello, Sign In
+                    Hello,   {userName? userName : 'Sign In'} 
                 </NavLink>
             </li>
         </>

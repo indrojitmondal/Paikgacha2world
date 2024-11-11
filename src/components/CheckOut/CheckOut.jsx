@@ -102,12 +102,12 @@ const CheckOut = () => {
                                         </label>
                                         <input type="text" placeholder="city" className="input input-bordered" required />
                                     </div>
-                                    <div className="form-control">
+                                    {/* <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Zip Code</span>
                                         </label>
                                         <input type="number" placeholder="zip code" className="input input-bordered" required />
-                                    </div>
+                                    </div> */}
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Phone number</span>

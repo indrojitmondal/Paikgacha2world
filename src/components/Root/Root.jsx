@@ -5,18 +5,24 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 export const cartContext = createContext([]);
 export const WishContext = createContext([]);
-
+export const userContext = createContext('');
 
 
 const Root = () => {
     const [cart, setCart]= useState([]);
     const [wish, setWish]= useState([]);
+    const [userName, setUserName] = useState('');
+
+    console.log('Hello,', userName);
     const location = useLocation();
  const path= location.pathname;
  console.log('Root Path',path);
     return (
         <cartContext.Provider value={{ cart, setCart }}>
         <WishContext.Provider value={{ wish, setWish }}>
+
+            <userContext.Provider value={{userName, setUserName}}>
+
             <div className=''>
                 <Navbar />
                 <Outlet />
@@ -40,7 +46,13 @@ const Root = () => {
 
 
             </div>
+
+            </userContext.Provider>
+        
+            
+       
         </WishContext.Provider>
+
         </cartContext.Provider>
     );
 };
