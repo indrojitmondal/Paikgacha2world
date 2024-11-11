@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { cartContext } from '../Root/Root';
 import Cart from '../Cart/Cart';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import modalImage from '../../assets/Group.png'
+import { Helmet } from 'react-helmet-async';
 
 const CartDetails = () => {
 
@@ -69,6 +70,15 @@ const CartDetails = () => {
 
     return (
         <div>
+           
+
+            <Helmet>
+                <title>Paikgacha.com | Cart List</title>
+                {/* <meta name="description" content="Description of this page" /> */}
+                {/* <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico" /> */}
+                <link rel="shortcut icon" href="https://i.ibb.co.com/hVqQxsG/favicon-16x16.png" type="image/x-icon" />
+
+            </Helmet>
             <div className='bg-primary py-5 mt-4 text-white'>
 
 
@@ -117,7 +127,7 @@ const CartDetails = () => {
                                     setCartProduct(sortCarts);
                                   }} 
                                  className='border border-yellow-700 text-primary rounded-[32px] font-bold px-4 py-2'>Short by Price</button>
-                                <button onClick={openModal} className='border border-primary text-white bg-primary  rounded-[32px] font-bold px-4 py-2'>Purchase</button>
+                                <Link to={'/checkOut'} className='border border-primary text-white bg-primary  rounded-[32px] font-bold px-4 py-2'>Purchase</Link>
                             </div>
                         </div>
                         <div>

@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import Modal from '../Modal/Modal';
 import modalImage from '../../assets/Group.png'
 import WishList from '../WishList/WishList';
+import { Helmet } from 'react-helmet-async';
 
 const WishDetails = () => {
     const { wish, setWish } = useContext(WishContext);
@@ -71,6 +72,13 @@ const WishDetails = () => {
     } 
     return (
         <div>
+              <Helmet>
+                <title>Paikgacha.com | Wish List</title>
+                {/* <meta name="description" content="Description of this page" /> */}
+                {/* <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico" /> */}
+                <link rel="shortcut icon" href="https://i.ibb.co.com/hVqQxsG/favicon-16x16.png" type="image/x-icon" />
+
+            </Helmet>
             <div className='bg-primary py-5 mt-4 text-white'>
                     <h1 className='text-center text-2xl font-bold'>Your Wish List</h1>
 

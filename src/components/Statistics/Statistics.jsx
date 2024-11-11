@@ -48,7 +48,7 @@ const Statistics = () => {
              
                        
 
-                    </div>
+             </div>
             <div style={{ width: '100%', height: '400px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                     <ComposedChart

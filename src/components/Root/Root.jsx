@@ -28,7 +28,8 @@ const Root = () => {
                         (path==='/dashboard') || 
                         (path==='/signIn')  ||
                         (path==='/cartList') ||
-                        (path==='/wishList') 
+                        (path==='/wishList')  ||
+                        (path==='/checkOut')
                         
                     ) 
                     && 

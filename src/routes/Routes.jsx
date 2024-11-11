@@ -20,6 +20,7 @@ import Accessories from "../components/Accessories/Accessories";
 import SignIn from "../components/SignIn/SignIn";
 import CartDetails from "../components/CartDetails/CartDetails";
 import WishDetails from "../components/WishDetails/WishDetails";
+import CheckOut from "../components/CheckOut/CheckOut";
 
 const routes = createBrowserRouter([
     {
@@ -60,6 +61,12 @@ const routes = createBrowserRouter([
           element: <WishDetails></WishDetails>,
           loader: () => fetch('/allProducts.json'),
         },
+        {
+          path: '/checkOut',
+          element: <CheckOut></CheckOut>,
+          loader: () => fetch('/allProducts.json'),
+        },
+
         {
           path:'/products',
           element: <Products></Products>,

@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const SignIn = () => {
     return (
-        <div className='m-10 border   rounded-xl  '>
+        <div className='mx-10 mt-3 border   rounded-xl  '>
             {/* <h2 className='text-2xl py-4 text-center font-bold'>Welcome to Paikgacha.com</h2> */}
 
             <div className='bg-primary py-5 text-white'>
