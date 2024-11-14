@@ -153,7 +153,7 @@ const Navbar = () => {
                         <div className="">
 
 
-                            <h1 className='text-xl font-bold'>Paikgacha.com</h1>
+                            <h1 className='text-xl font-bold'>Paikgacha2World.com</h1>
                         </div>
                         <div className="flex">
                             <ul className=" flex gap-10 px-1">

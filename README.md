@@ -4,7 +4,7 @@
 
 # Live Site Link 
 
-<a href='https://b10a8-gadget-heaven-indrojitmondal.surge.sh'>https://b10a8-gadget-heaven-indrojitmondal.surge.sh </a>
+<a href='https://paikgacha.surge.sh/'>Vist the site</a>
 
 
 # List of React Fundamental concepts used in the project
