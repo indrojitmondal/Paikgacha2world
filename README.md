@@ -7,6 +7,11 @@
 <a href='https://paikgacha.surge.sh/'>Vist the site</a>
 
 
+# Firebase Live Site Link 
+
+<a href='https://paikgachadotcom-b9d74.web.app/'>Vist the site</a>
+
+
 # List of React Fundamental concepts used in the project
 1. React Component
 2. React Routing
