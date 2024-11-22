@@ -17,8 +17,8 @@ const ProductDetail = () => {
 
     const allProducts = useLoaderData();
     const { product_id } = useParams();
-    console.log('ProductDetails OK: ', allProducts);
-    console.log('Id:', product_id);
+    // console.log('ProductDetails OK: ', allProducts);
+    // console.log('Id:', product_id);
 
     let idx = product_id;
 

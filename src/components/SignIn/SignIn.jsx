@@ -23,7 +23,7 @@ const SignIn = () => {
 
                 // The signed-in user info.
                 const userDisplayName = result.user.displayName;
-                console.log('User Name: ', userDisplayName);
+                // console.log('User Name: ', userDisplayName);
                 setUserName(userDisplayName);
                 navigate('/');
 
@@ -31,7 +31,7 @@ const SignIn = () => {
 
             }).catch((error) => {
                 // Handle Errors here.
-                console.log('Error: ', error);
+                // console.log('Error: ', error);
             });
 
 

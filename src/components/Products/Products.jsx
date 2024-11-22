@@ -30,11 +30,11 @@ const Products = () => {
 
     const handleCategory = category => {
 
-        console.log(category);
-        console.log('ALL:', allProducts);
+        // console.log(category);
+        // console.log('ALL:', allProducts);
 
         const newData = allProducts.filter(p => p.category == category);
-        console.log('New Data:', newData);
+        // console.log('New Data:', newData);
 
 
 
@@ -45,7 +45,7 @@ const Products = () => {
     const location = useLocation();
 
 
-    console.log('Path:', location.pathname);
+    // console.log('Path:', location.pathname);
     const path = location.pathname;
 
 
@@ -54,17 +54,17 @@ const Products = () => {
 
 
         if (path === '/products/laptops') {
-            console.log('yes');
+            // console.log('yes');
             // setHeading('Upgrade Your Tech Accessorize with Gadget Heaven Accessories');
 
         }
         else if (path === '/statistics') {
-            console.log('yes');
+            // console.log('yes');
             // setHeading('Statistics');
 
         }
         else if (path === '/dashboard') {
-            console.log('yes');
+            // console.log('yes');
             //setHeading('Dashboard');
 
         }

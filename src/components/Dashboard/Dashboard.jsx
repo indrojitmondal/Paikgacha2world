@@ -40,8 +40,8 @@ const Dashboard = () => {
 
     //   const allProducts= useLoaderData();
     const allProducts = useLoaderData() || [];
-    console.log('Type', typeof allProducts);
-    console.log(Array.isArray(allProducts));
+    // console.log('Type', typeof allProducts);
+    // console.log(Array.isArray(allProducts));
 
     const [cartProduct, setCartProduct]= useState([]);
 
@@ -79,14 +79,14 @@ const Dashboard = () => {
 
 
 
-    console.log('CartProductOk:', cartProduct.length);
+    // console.log('CartProductOk:', cartProduct.length);
     const [totalCost, setTotalCost]= useState(0);
 
    useEffect(()=>{
-       console.log('Cost-length',cartProduct.length);
+    //    console.log('Cost-length',cartProduct.length);
        let cost=0;
        const sum= cartProduct.reduce( (p,c)=>p+c.price,0);
-       console.log('Total Cost:',sum);
+    //    console.log('Total Cost:',sum);
        setTotalCost(sum);
    },[cartProduct]);
 
@@ -110,9 +110,9 @@ const Dashboard = () => {
 
     const handleAddToCart = (x)=>{
 
-        console.log("Hello from add to cart",x);
+        // console.log("Hello from add to cart",x);
         setCart([...cart,x]);
-        console.log(cart.length);
+        // console.log(cart.length);
         const product= allProducts.find(p=>p.product_id==x);
         const productTitle= product.product_title; 
         toast(`${productTitle} is added to your cart list.`);
@@ -120,10 +120,10 @@ const Dashboard = () => {
     }
 
     const handleRemoveCart = (x)=>{
-        console.log('Hello from cart remove', x);
-        console.log("Carts:",cart);
+        // console.log('Hello from cart remove', x);
+        // console.log("Carts:",cart);
       const newCarts= cart.filter(p => p != x );
-        console.log('What happen:',newCarts);
+        // console.log('What happen:',newCarts);
          setCart(newCarts);
          
          
@@ -131,7 +131,7 @@ const Dashboard = () => {
 
     const handleRemoveWish = (x)=>{
 
-        console.log('Hello from wish remove');
+        // console.log('Hello from wish remove');
         const newWishLists= wish.filter(p=>p !=x );
         setWish(newWishLists);
 

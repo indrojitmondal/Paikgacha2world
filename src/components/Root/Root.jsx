@@ -13,10 +13,10 @@ const Root = () => {
     const [wish, setWish]= useState([]);
     const [userName, setUserName] = useState('');
 
-    console.log('Hello,', userName);
+    // console.log('Hello,', userName);
     const location = useLocation();
  const path= location.pathname;
- console.log('Root Path',path);
+//  console.log('Root Path',path);
     return (
         <cartContext.Provider value={{ cart, setCart }}>
         <WishContext.Provider value={{ wish, setWish }}>

@@ -35,10 +35,10 @@ const CartDetails = () => {
     const [totalCost, setTotalCost] = useState(0);
 
     useEffect(() => {
-        console.log('Cost-length', cartProduct.length);
+        // console.log('Cost-length', cartProduct.length);
         let cost = 0;
         const sum = cartProduct.reduce((p, c) => p + c.price, 0);
-        console.log('Total Cost:', sum);
+        // console.log('Total Cost:', sum);
         setTotalCost(sum);
     }, [cartProduct]);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,10 +59,10 @@ const CartDetails = () => {
     }
     
     const handleRemoveCart = (x)=>{
-        console.log('Hello from cart remove', x);
-        console.log("Carts:",cart);
+        // console.log('Hello from cart remove', x);
+        // console.log("Carts:",cart);
       const newCarts= cart.filter(p => p != x );
-        console.log('What happen:',newCarts);
+        // console.log('What happen:',newCarts);
          setCart(newCarts);
          
          

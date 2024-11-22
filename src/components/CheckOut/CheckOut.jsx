@@ -10,8 +10,8 @@ const CheckOut = () => {
     const { cart, setCart } = useContext(cartContext);
 
     const allProducts = useLoaderData() || [];
-    console.log('Type', typeof allProducts);
-    console.log(Array.isArray(allProducts));
+    // console.log('Type', typeof allProducts);
+    // console.log(Array.isArray(allProducts));
 
     const [cartProduct, setCartProduct] = useState([]);
 
@@ -29,14 +29,14 @@ const CheckOut = () => {
     }, [cart, allProducts]);
 
 
-    console.log('CartProductOk:', cartProduct.length);
+    // console.log('CartProductOk:', cartProduct.length);
     const [totalCost, setTotalCost] = useState(0);
 
     useEffect(() => {
-        console.log('Cost-length', cartProduct.length);
+        // console.log('Cost-length', cartProduct.length);
         let cost = 0;
         const sum = cartProduct.reduce((p, c) => p + c.price, 0);
-        console.log('Total Cost:', sum);
+        // console.log('Total Cost:', sum);
         setTotalCost(sum);
     }, [cartProduct]);
 

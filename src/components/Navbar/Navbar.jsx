@@ -27,7 +27,7 @@ const Navbar = () => {
     // console.log('Cart:', cart);
     // console.log('Wish length', wish.length);
     const handleCart = (x) => {
-        console.log(x)
+        // console.log(x)
 
     }
 
@@ -36,7 +36,7 @@ const Navbar = () => {
     const location = useLocation();
 
 
-    console.log('Path:', location.pathname);
+    // console.log('Path:', location.pathname);
     const path = location.pathname;
 
 
@@ -45,17 +45,17 @@ const Navbar = () => {
 
 
         if (path === '/') {
-            console.log('yes');
+            // console.log('yes');
             setHeading('Upgrade Your Tech Accessorize with Gadget Heaven Accessories');
 
         }
         else if (path === '/statistics') {
-            console.log('yes');
+            // console.log('yes');
             setHeading('Statistics');
 
         }
         else if (path === '/dashboard') {
-            console.log('yes');
+            // console.log('yes');
             setHeading('Dashboard');
 
         }
@@ -153,7 +153,7 @@ const Navbar = () => {
                         <div className="">
 
 
-                            <h1 className='text-xl font-bold'>Paikgacha2World.com</h1>
+                            <h1 className='text-xl font-bold'>Paikgachadot.com</h1>
                         </div>
                         <div className="flex">
                             <ul className=" flex gap-10 px-1">
@@ -198,7 +198,7 @@ const Navbar = () => {
 
 
                             <div className="form-control relative  mx-auto w-[300px]">
-                                <input type="text" placeholder="Search Paikgacha" className="input text-black  input-bordered " />
+                                <input type="text" placeholder="Search product" className="input text-black  input-bordered " />
                                  
                                  <button className='absolute right-3 top-4'>
                                  <IoSearch className=' text-primary' />

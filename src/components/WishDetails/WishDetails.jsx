@@ -39,9 +39,9 @@ const WishDetails = () => {
     }, [wish]);
     const handleAddToCart = (x)=>{
 
-        console.log("Hello from add to cart",x);
+        // console.log("Hello from add to cart",x);
         setCart([...cart,x]);
-        console.log(cart.length);
+        // console.log(cart.length);
         const product= allProducts.find(p=>p.product_id==x);
         const productTitle= product.product_title; 
         toast(`${productTitle} is added to your cart list.`);
@@ -49,7 +49,7 @@ const WishDetails = () => {
     }
     const handleRemoveWish = (x)=>{
 
-        console.log('Hello from wish remove');
+        // console.log('Hello from wish remove');
         const newWishLists= wish.filter(p=>p !=x );
         setWish(newWishLists);
 
